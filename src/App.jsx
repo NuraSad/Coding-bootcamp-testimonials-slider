@@ -35,13 +35,13 @@ function App() {
   return (
     <>
       <div className='carousel'>
-      <svg id="curve" xmlns="http://www.w3.org/2000/svg" width="610" height="154"><path fill="#F4F4FC" fillRule="evenodd" d="M610 154C469.493 123.42 358.432 86.087 276.818 42S102.93-11.42 0 14v140h610z"/></svg>
+      <svg id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 154"><path fill="#F4F4FC" fillRule="evenodd" d="M610 154C469.493 123.42 358.432 86.087 276.818 42S102.93-11.42 0 14v140h610z"/></svg>
         {peopleInfo.map((person, idx) => {
           return <Card key={idx} text={person.text} img={person.img} credentials={person.credentials} className={idx === cardNumber ? 'card active' : 'card'}/>
         })}
         <div className='button-field'>
-          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg" width="12" height="18"><path fill="none" stroke="#8585AC" strokeWidth="3" d="M11 1L3 9l8 8"/></svg></button>
-          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg" width="13" height="18"><path fill="none" stroke="#8585AC" strokeWidth="3" d="M2 1l8 8-8 8"/></svg></button>
+          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 12 18" ><path fill="none" stroke="#8585AC" strokeWidth="3" d="M11 1L3 9l8 8"/></svg></button>
+          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 12 18"><path fill="none" stroke="#8585AC" strokeWidth="3" d="M2 1l8 8-8 8"/></svg></button>
         </div>
       </div>
     </>
