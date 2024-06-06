@@ -138,6 +138,10 @@ button svg {
   height: 1.8rem;
 }
 
+button:hover svg path {
+  stroke: hsla(240, 52%, 29%, 0.3);
+}
+
 @media only screen and (max-width: 750px) {
   .card {
     flex-direction: column-reverse;
