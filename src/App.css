@@ -38,6 +38,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 p.text {
@@ -122,6 +124,10 @@ button:first-child {
   border-bottom-left-radius: 50%;
 }
 
+button:first-child svg {
+  transform: rotate(-180deg);
+}
+
 button:last-child {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -195,5 +201,16 @@ button svg {
 
   button svg {
     height: 2.2rem;
+  }
+
+  button svg path {
+    stroke-width: 3px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .button-field {
+    left: 65%;
+    top: 70%;
   }
 }

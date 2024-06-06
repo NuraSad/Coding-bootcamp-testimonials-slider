@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Card from './components/Card.jsx'
 import './App.css'
 import tanyaPhoto from './assets/image-tanya.jpg'
@@ -32,6 +32,17 @@ function App() {
     setCardNumber(prev => prev === 0 ? 1 : 0);
   }
 
+  useEffect(() => {
+    function handleArrowKeys(event) {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft'){
+        setCardNumber(prev => prev === 0 ? 1 : 0);
+      }
+    }
+    window.addEventListener('keydown', handleArrowKeys)
+
+    return () => {window.removeEventListener('keydown', handleArrowKeys)};
+  }, [])
+
   return (
     <>
       <div className='carousel'>
@@ -40,7 +51,7 @@ function App() {
           return <Card key={idx} text={person.text} img={person.img} credentials={person.credentials} className={idx === cardNumber ? 'card active' : 'card'}/>
         })}
         <div className='button-field'>
-          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 12 18" ><path fill="none" stroke="#8585AC" strokeWidth="3" d="M11 1L3 9l8 8"/></svg></button>
+          <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 12 18" preserveAspectRatio="xMidYMid meet" ><path fill="none" stroke="#8585AC" strokeWidth="3" d="M2 1l8 8-8 8"/></svg></button>
           <button onClick={handleButtonClick}><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 12 18"><path fill="none" stroke="#8585AC" strokeWidth="3" d="M2 1l8 8-8 8"/></svg></button>
         </div>
       </div>
