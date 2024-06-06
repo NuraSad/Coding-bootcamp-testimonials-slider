@@ -53,4 +53,4 @@ I also liked that this challenge had the requirement of using JavaScript to make
 ## Author
 
 - Ainur Saduova
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@NuraSad](https://www.frontendmentor.io/profile/NuraSad)
